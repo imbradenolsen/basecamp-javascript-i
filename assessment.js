@@ -10,7 +10,7 @@ var iLoveCode = myName + " loves code";
 // #3 using the arrow syntax, create a function called 'wildNameReturn' that takes in variable as a parameter. Return the variable inside of the function with the word 'wild' in front so it returns "wild Bryan" and then invoke wildNameReturn using the 'myName' variable you created as an argument.
 
 var wildNameReturn = (variable) => "wild " + variable;
-wildNameReturn(myName)
+wildNameReturn(myName);
 
 // #4 using the arrow syntax, create a function called 'sum' that takes in a number and returns that number added to itself.
 
@@ -18,10 +18,10 @@ var sum = (num) => num+num;
 
 // #5 using the arrow syntax, create a function called 'greeter' that takes in two parameters, name & age. greeter should return a string like this "Hi, I'm Bryan and I am 27 years old." but replacing the name and age with the passed in values. The test on this question is very strict on casing and punctuation.
 
-var greeter = (name, age) => "Hi, I'm " + name + " and i am" + age + " years old."
+var greeter = (name, age) => "Hi, I'm " + name + " and i am" + age + " years old.";
 
 // #6 using the arrow syntax, create a function called 'animalSounds'. animalSound takes three parameters: name, sound and a callback. animalSound should return something like this "I am wild Bryan. Hear me woof." when invoked using the wildNameReturn function you previously created as the callback.
-var animalSounds = (name, sound, callback) => ""
+var animalSounds = (name, sound, callback) => "";
 
 // CALLBACKS
 // Here we will write a function that takes in a callback as a parameter. You must write the callback function to make the existing function work properly.
@@ -29,7 +29,7 @@ var animalSounds = (name, sound, callback) => ""
 // You would create the sayHi function here
 var sayHi = (str, callback) =>{
   callback(str);
- }
+ };
 // So you can use it down here
  sayHi('Hi Lindsey', thingToSay =>{
     alert(thingToSay); //should alert ('Hi Lindsey')'
@@ -41,7 +41,7 @@ var names = ['Bryan', 'Jeremy', 'Joe', 'Megan', 'Ian', 'Taylor'];
 
 var first = () =>{
   return names.indexOf(0);
-}
+};
 
 
 first(names, firstName => {
@@ -87,15 +87,15 @@ friends.splice(3,0,"Harry");
 
 var shortNames = friends.filter(function(val,i,arr){
   return val.length<4;
-})
+});
 
 // #13 here we have created a NickNameMaker function that will shorten names to the begninning two Characters so 'Cam' will be 'CaCa. Using the nickNameMaker function, map over the previously created friends array to return the friends nick names and assign it to 'shorty'.
 
 var nickNameMaker = (name) => {
   return name.split('').slice(0,2).join('') + name.split('').slice(0,2).join('');
-}
+};
 
-var shorty = friends.map(nickNameMaker)
+var shorty = friends.map(nickNameMaker);
 
 // #14 assign 'evens' the return value of even numbers from the numbers array
 var numbers = [1, 25, 6, 88, 47, 77, 333, 500];
@@ -111,11 +111,11 @@ var evens = () => {
 
 var plusThree = numbers.map(function(element){
   return element+3;
-})
+});
 
 // #15 using the 'goodPeople' array of objects, add a new key value pair of 'family: true' to each object. Hint: use forEach
-var goodPeople = [{name: 'George'}, {name: 'Randi'}, {name: 'Lindsey'}]
+var goodPeople = [{name: 'George'}, {name: 'Randi'}, {name: 'Lindsey'}];
 
 goodPeople.forEach(function(val,i,arr){
   arr[i]= family: true;
-})
+});
